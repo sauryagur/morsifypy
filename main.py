@@ -37,3 +37,12 @@ def morsify(text):
         '9': '----⋅',
         '0': '-----',
     }
+    stringmap = {v: k for k, v in morsemap.items()}
+    output = []
+    text = text.lower()
+    for letter in text:
+        print(morsemap[letter], " / ", end="")
+
+
+morsify("hello")
+
