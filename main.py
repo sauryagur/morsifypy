@@ -38,11 +38,11 @@ def morsify(text):
         '0': '-----',
     }
     stringmap = {v: k for k, v in morsemap.items()}
-    output = []
+    output = ""
     text = text.lower()
     for letter in text:
-        print(morsemap[letter], " / ", end="")
-
+        output += morsemap[letter] + " / "
+    print(output)
 
 morsify("hello")
 
