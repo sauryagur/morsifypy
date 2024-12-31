@@ -38,6 +38,7 @@ morsemap = {
 }
 
 stringmap = {v: k for k, v in morsemap.items()}
+stringmap[''] = ''
 
 def morsify(text):
     output = ""
@@ -46,7 +47,13 @@ def morsify(text):
         output += morsemap[letter] + " / "
     return output
 
+def demorsify(morse):
+    output = ""
+    morse = morse.split(" / ")
+    for morseletter in morse:
+        output += stringmap[morseletter]
+    return output
 
 
-morsify("hello")
+print(demorsify(morsify("289398738798dhu")))
 
