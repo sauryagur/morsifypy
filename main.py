@@ -42,7 +42,7 @@ def morsify(text):
     text = text.lower()
     for letter in text:
         output += morsemap[letter] + " / "
-    print(output)
+    return output
 
 morsify("hello")
 
